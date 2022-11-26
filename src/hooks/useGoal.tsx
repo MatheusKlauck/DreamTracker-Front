@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { Goal } from "../models/Goal";
+import { faker } from '@faker-js/faker';
 
 interface GoalProviderProps {
     children: React.ReactNode;
@@ -19,12 +20,9 @@ export function GoalProvider(props: GoalProviderProps) {
     }, [])
 
     async function getGoals() {
-        setGoals([
-            new Goal("Desenvolver o dreamTracker", "Criar teste 1", ["Abrir o navegador", "Criar teste", "Executar teste"]),
-            new Goal("Teste 2", "Criar teste 2", ["Abrir o navegador", "Criar teste", "Executar teste"]),
-            new Goal("Teste 3", "Criar teste 3", ["Abrir o navegador", "Criar teste", "Executar teste"]),
-            new Goal("Teste 4", "Criar teste 4", ["Abrir o navegador", "Criar teste", "Executar teste"])
-        ]);
+        let fakeGoals = new Array<Goal>(15).fill(new Goal(faker.lorem.lines(1), faker.lorem.lines(2), new
+            Array<string>(3).fill(faker.lorem.lines(1))));
+        setGoals(fakeGoals);
     }
 
     return (

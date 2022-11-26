@@ -9,7 +9,7 @@ export function DefaultLayout() {
         <>
             <Box mt={verticalPadding * 2} ml={horizontalPadding * 2} mr={horizontalPadding * 2}>
                 <Header />
-                <Box pt={verticalPadding} pb={verticalPadding} pl={horizontalPadding} pr={horizontalPadding}>
+                <Box pt={verticalPadding} pb={verticalPadding} pl={0} pr={0}>
                     <Outlet />
                 </Box>
             </Box>

@@ -1,4 +1,4 @@
-import { Center, Grid, SimpleGrid } from "@chakra-ui/react";
+import { SimpleGrid } from "@chakra-ui/react";
 import { useGoal } from "../../../hooks/useGoal";
 import { GoalCard } from "../GoalCard";
 

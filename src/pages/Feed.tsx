@@ -9,9 +9,24 @@ const Feed = () => {
             <Box textAlign={"center"} pb={20} pt={8}>
                 <Heading size="lg">Não perca seu foco! Aqui estão as suas metas para hoje.</Heading>
             </Box>
-            <GoalProvider>
-                <DisplayAsGrid />
-            </GoalProvider>
+            <Box maxH={"60vh"} overflowY={"scroll"} p={2}
+                sx={{
+                    '&::-webkit-scrollbar': {
+                        w: '2',
+                    },
+                    '&::-webkit-scrollbar-track': {
+                        w: '8',
+                    },
+                    '&::-webkit-scrollbar-thumb': {
+                        borderRadius: '8',
+                        bg: `gray.100`,
+                    },
+                }}
+            >
+                <GoalProvider>
+                    <DisplayAsGrid />
+                </GoalProvider>
+            </Box>
         </Box>
     </>
 }
