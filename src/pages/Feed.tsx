@@ -1,4 +1,4 @@
-import { Box, Center, Heading } from "@chakra-ui/react"
+import { Box, Heading } from "@chakra-ui/react"
 import { DisplayAsGrid } from "../components/Goals/Displays/DisplayAsGrid"
 import { GoalProvider } from "../hooks/useGoal"
 
@@ -18,7 +18,7 @@ const Feed = () => {
                         w: '8',
                     },
                     '&::-webkit-scrollbar-thumb': {
-                        borderRadius: '8',
+                        borderRadius: '4',
                         bg: `gray.100`,
                     },
                 }}
