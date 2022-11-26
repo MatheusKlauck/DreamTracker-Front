@@ -6,18 +6,19 @@ interface props {
     goal: Goal;
 }
 
-export const DisplayGoal = ({ goal }: props) => {
+export const GoalCard = ({ goal }: props) => {
     return <>
         <Card bg={"gray.50"} shadow={'lg'}>
             <CardHeader>
                 <Heading size='md'>{goal.Title}</Heading>
-                <Text as='i'>
+                <Text as='i' pl={2}>
                     {goal.Description}
                 </Text>
             </CardHeader>
-            <CardBody >
-                <Heading size='xs'>Você dividiu esta meta em {goal.Tasks.length} tarefas</Heading>
-                <Box >
+            <CardBody pl={6}>
+
+                <Box pl={2}>
+                    <Heading size='xs'>Você dividiu esta meta em {goal.Tasks.length} tarefas</Heading>
                     {goal.Tasks.map((task) => (
                         <Text pt='1' fontSize='sm'>
                             {task}
