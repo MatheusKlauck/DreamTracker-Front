@@ -2,7 +2,7 @@ import { extendTheme, StyleFunctionProps } from "@chakra-ui/react";
 
 const baseColor = 'blue';
 
-export const customTheme = extendTheme({
+const customTheme = extendTheme({
     styles: {
         global: {
             body: {
@@ -27,3 +27,19 @@ export const customTheme = extendTheme({
     },
 
 });
+
+const customScroll =
+{
+    '&::-webkit-scrollbar': {
+        w: '2',
+    },
+    '&::-webkit-scrollbar-track': {
+        w: '8',
+    },
+    '&::-webkit-scrollbar-thumb': {
+        borderRadius: '4',
+        bg: `gray.100`,
+    },
+}
+
+export { customScroll, customTheme }
