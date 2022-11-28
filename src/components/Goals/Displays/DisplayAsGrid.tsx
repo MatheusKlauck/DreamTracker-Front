@@ -1,6 +1,6 @@
 import { SimpleGrid } from "@chakra-ui/react";
 import { useGoal } from "../../../hooks/useGoal";
-import { GoalCard } from "../GoalCard";
+import { GoalCard } from "./GoalCard";
 
 interface props {
 }
@@ -13,7 +13,7 @@ export const DisplayAsGrid = () => {
             {
                 goals &&
                 goals.map((goal) => (
-                    <GoalCard goal={goal} />))
+                    <GoalCard goal={goal} key={goal.Id} />))
             }
         </SimpleGrid>
     </>

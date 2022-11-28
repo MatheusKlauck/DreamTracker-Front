@@ -1,4 +1,4 @@
-import { Goal } from "../../models/Goal";
+import { Goal } from "../../../models/Goal";
 import { Heading, Box, Text, Checkbox, VStack } from '@chakra-ui/react'
 import { Card, CardHeader, CardBody } from '@chakra-ui/react'
 
@@ -20,7 +20,7 @@ export const GoalCard = ({ goal }: props) => {
                     <Heading size='xs'>Você dividiu esta meta em {goal.Tasks.length} tarefas</Heading>
                     <VStack align={"left"} pl={2}>
                         {goal.Tasks.map((task) => (
-                            <Checkbox>{task}</Checkbox>
+                            <Checkbox>{task.Description}</Checkbox>
                         ))}
                     </VStack>
                 </Box>
