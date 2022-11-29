@@ -1,5 +1,5 @@
 import { SimpleGrid } from "@chakra-ui/react";
-import { useGoal } from "../../../hooks/useGoal";
+import { useGoal } from "../../../../hooks/useGoal";
 import { GoalCard } from "./GoalCard";
 
 interface props {

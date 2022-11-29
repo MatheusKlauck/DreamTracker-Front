@@ -1,6 +1,6 @@
 import { Box, Heading } from "@chakra-ui/react"
 import { CreateGoalModal } from "../components/Goals/CreateGoalModal"
-import { DisplayAsGrid } from "../components/Goals/Displays/DisplayAsGrid"
+import { DisplayAsGrid } from "../components/Goals/Displays/Card/DisplayAsGrid"
 import { GoalProvider } from "../hooks/useGoal"
 import { customScroll } from "../theme"
 
