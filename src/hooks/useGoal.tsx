@@ -9,6 +9,7 @@ interface GoalProviderProps {
 
 interface GoalContext {
     goals: Goal[];
+    addGoal: (goal: Goal) => void;
 }
 
 const GoalContext = createContext<GoalContext>({} as GoalContext);
@@ -33,8 +34,15 @@ export function GoalProvider(props: GoalProviderProps) {
         setGoals(fakeGoals);
     }
 
+    async function addGoal(goal: Goal) {
+        const newGoal = new Goal(goal.Title, goal.Description, []);
+        const updatedGoals = [newGoal, ...goals]
+        setGoals(updatedGoals);
+        console.log(goals);
+    }
+
     return (
-        <GoalContext.Provider value={{ goals }}>
+        <GoalContext.Provider value={{ goals, addGoal }}>
             {props.children}
         </GoalContext.Provider>
     )
